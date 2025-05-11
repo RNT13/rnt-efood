@@ -1,54 +1,55 @@
-# React + TypeScript + Vite
+# 🍽️ Efood - World Cuisine Delivery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive food delivery platform, built with:
 
-Currently, two official plugins are available:
+- ⚛️ React + TypeScript
+- ⚡ Vite for fast bundling
+- 🎨 Styled Components for custom UI
+- 🧹 ESLint + Prettier for clean code
+- 🚀 Hosting via Vercel
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br>
 
-## Expanding the ESLint configuration
+## 🌐 Access the live page: [Efood](https://rnt-efood.vercel.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<br>
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📦 Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**React** – Library for building user interfaces.
+**TypeScript** – Superset of JavaScript that adds static typing.
+**Vite** – Next-generation bundler for rapid development.
+**Styled Components** – CSS-in-JS for modular and reusable styling.
+**Redux** – State management for cart and delivery flow.
+**ESLint & Prettier** – Tools for linting and code formatting.
+**Vercel** – Hosting platform for front-end projects.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+<br>
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## ✅ Features
+
+- Responsive design for all devices
+- Explore restaurants by country and cuisine
+- Add dishes to cart and complete delivery flow
+- Social links and project info in the footer
+- Clean, organized, and scalable codebase
+
+<br>
+
+## 📚 References
+
+- [⚛️ React](https://react.dev/)
+- [📘 TypeScript](https://www.typescriptlang.org/)
+- [⚡ Vite](https://vitejs.dev/)
+- [▲ Vercel](https://vercel.com/)
+- [🧑‍🍳 Styled Components](https://styled-components.com/)
+- [🛒 Redux](https://redux.js.org/)
+
+<br>
+
+## 👤 Author
+
+Made with 💙 by [Renato Minoita](https://www.linkedin.com/in/renato-luiz-0b072b247/)
+Check out more on [GitHub](https://github.com/RNT13)
+
+<br>
