@@ -8,13 +8,10 @@ export const HeaderWrapper = styled.div`
 `
 
 export const HeaderContainer = styled.div`
-  padding-top: 40px;
+  padding-top: 50px;
   width: 100%;
   height: 310px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+
   background-image: url('/images/Vector.png');
   background-size: cover;
   background-position: center;
@@ -29,12 +26,19 @@ export const HeaderContainer = styled.div`
   }
 `
 
+export const HomeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+`
+
 export const HeaderNavMenu = styled.nav`
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 100%;
   width: 100%;
 `
 

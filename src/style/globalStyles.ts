@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
       font-family: "Roboto", sans-serif;
       font-weight: bold;
       background-color: ${theme.colors.secondaryColor};
+      overflow-x: hidden;
     }
 
     .container {
