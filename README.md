@@ -16,13 +16,13 @@ A modern and responsive food delivery platform, built with:
 
 ## 📦 Tech Stack
 
-**React** – Library for building user interfaces.
-**TypeScript** – Superset of JavaScript that adds static typing.
-**Vite** – Next-generation bundler for rapid development.
-**Styled Components** – CSS-in-JS for modular and reusable styling.
-**Redux** – State management for cart and delivery flow.
-**ESLint & Prettier** – Tools for linting and code formatting.
-**Vercel** – Hosting platform for front-end projects.
+**React** – Library for building user interfaces.<br>
+**TypeScript** – Superset of JavaScript that adds static typing.<br>
+**Vite** – Next-generation bundler for rapid development.<br>
+**Styled Components** – CSS-in-JS for modular and reusable styling.<br>
+**Redux** – State management for cart and delivery flow.<br>
+**ESLint & Prettier** – Tools for linting and code formatting.<br>
+**Vercel** – Hosting platform for front-end projects.<br>
 
 <br>
 
