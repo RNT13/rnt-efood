@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import {
   DeliveryButton,
   DeliveryContainer,
+  DeliveryFooter,
   DeliveryForm,
   DeliveryInput,
   DeliveryInputHalf,
@@ -98,12 +99,14 @@ const Delivery: React.FC<DeliveryProps> = ({ onContinue, onBack }) => {
         </DeliveryRow>
         <DeliveryLabel htmlFor="complement">Complemento (opcional)</DeliveryLabel>
         <DeliveryInput name="complement" value={formData.complement} onChange={handleChange} placeholder="Apartamento, bloco, etc." autoComplete="address-line3" />
-        <DeliveryButton id='first' type="button" onClick={handleSubmit}>
-          Continuar com o pagamento
-        </DeliveryButton>
-        <DeliveryButton type="button" onClick={onBack}>
-          Voltar para o carrinho
-        </DeliveryButton>
+        <DeliveryFooter>
+          <DeliveryButton type="button" onClick={handleSubmit}>
+            Continuar com o pagamento
+          </DeliveryButton>
+          <DeliveryButton type="button" onClick={onBack}>
+            Voltar para o carrinho
+          </DeliveryButton>
+        </DeliveryFooter>
       </DeliveryForm>
     </DeliveryContainer>
   )

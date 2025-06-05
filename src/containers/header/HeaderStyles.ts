@@ -7,68 +7,99 @@ export const HeaderWrapper = styled.div`
   grid-area: header;
 `
 
-export const HeaderContainer = styled.div`
-  padding-top: 50px;
+export const HeaderNavMenu = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  height: 310px;
-
-  background-image: url('/images/Vector.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  max-height: 100%;
+  width: 100%;
+  padding: 0px 0 64px 0;
 
   ${(media.md, media.sm)} {
-    height: 450px;
-
-    p {
-      font-size: 3rem;
-    }
+    flex-direction: column-reverse;
+    gap: 20px;
   }
 `
 
-export const HomeContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 100px;
-`
-
-export const HeaderNavMenu = styled.nav`
+export const HeaderRestaurantBanner = styled.div`
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  height: 280px;
   width: 100%;
-`
-
-export const HeaderImage = styled.img`
-  object-fit: cover;
-  filter: brightness(40%);
-  height: 250px;
-  width: 100%;
-`
-
-export const HeaderTitle = styled.div`
-  position: relative;
-  width: 1000px;
-  top: 220px;
-  left: 0px;
-  font-size: 36px;
-  color: ${theme.colors.textColor};
-  text-align: left;
-  z-index: 1;
-
-  span {
-    margin-left: 20px;
-  }
-  svg {
-    color: ${theme.colors.yellow3};
-  }
+  background-size: cover;
 
   ${(media.md, media.sm)} {
     padding-left: 50px;
     font-size: 2.5em;
+  }
+`
+
+export const HeaderRestaurantBannerText = styled.div`
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 24px 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  color: ${theme.colors.textColor};
+  z-index: 1;
+
+  span:first-child {
+    font-weight: 100;
+    font-size: 32px;
+  }
+
+  span {
+    font-weight: 900;
+    font-size: 32px;
+  }
+
+  svg {
+    color: ${theme.colors.yellow2};
+    margin: 0px 0px 0px 16px;
+  }
+`
+
+export const HeaderSpan = styled.p`
+  color: ${theme.colors.primaryColor};
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+
+  &:hover {
+    color: ${theme.colors.blue2};
+  }
+
+  ${(media.md, media.sm)} {
+    font-size: 3rem;
+  }
+`
+
+export const NavItem = styled(Link)`
+  margin-right: 90px;
+  text-decoration: none;
+  color: ${theme.colors.primaryColor};
+  font-weight: bold;
+  font-size: 18px;
+
+  &:hover {
+    color: ${theme.colors.blue2};
+  }
+
+  ${(media.md, media.sm)} {
+    font-size: 3rem;
+    margin-right: 0;
+  }
+`
+
+export const HeaderLogo = styled.img`
+  width: 124px;
+  height: 58px;
+
+  ${(media.md, media.sm)} {
+    width: 200px;
   }
 `
 
@@ -78,40 +109,55 @@ export const HeaderText = styled.p`
   text-align: center;
 `
 
-export const HeaderLogo = styled.img`
-  width: 100px;
-  height: auto;
+export const HeaderContainer = styled.div`
+  width: 100%;
+  height: 400px;
 
-  ${(media.md, media.sm)} {
-    width: 200px;
-  }
+  background-image: url('/images/Vector.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `
 
-export const NavItem = styled(Link)`
-  text-decoration: none;
-  color: ${theme.colors.primaryColor};
-  font-weight: bold;
-  transition: color 0.3s;
-
-  &:hover {
-    color: ${theme.colors.blue2};
-  }
-
-  ${(media.md, media.sm)} {
-    font-size: 2.5rem;
-  }
+export const HeaderMainContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 400px;
+  padding: 40px 0;
 `
 
-export const HeaderSpan = styled.span`
-  color: ${theme.colors.primaryColor};
-  font-weight: bold;
-  cursor: pointer;
+export const HeaderRestaurantContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  padding: 40px 0 0 0;
 
-  &:hover {
-    color: ${theme.colors.blue2};
-  }
+  ${media.sm} {
+    width: 900px;
+    height: 550px;
+    align-items: stretch center;
 
-  ${(media.md, media.sm)} {
-    font-size: 2.5rem;
+    ${NavItem} {
+      order: 2;
+    }
+
+    ${HeaderText} {
+      order: 3;
+    }
+
+    ${HeaderLogo} {
+      order: 3;
+    }
+
+    ${HeaderRestaurantBanner} {
+      order: 4;
+    }
   }
 `

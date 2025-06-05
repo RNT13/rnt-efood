@@ -7,16 +7,9 @@ export const DeliveryContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 16px;
   width: 100%;
-  height: 100%;
-  padding-top: 40px;
   color: ${theme.colors.secondaryColor};
-
-  #first {
-    margin-top: 50px;
-    margin-bottom: 10px;
-  }
 
   ${media.sm} {
     width: 100%;
@@ -49,7 +42,7 @@ export const DeliveryTitle = styled.h2`
 export const DeliveryForm = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 `
 
 export const DeliveryLabel = styled.label`
@@ -60,10 +53,18 @@ export const DeliveryLabel = styled.label`
 export const DeliveryInput = styled.input`
   width: 100%;
   padding: 8px;
-  border: 1px solid ${theme.colors.secondaryColor};
-  background-color: ${theme.colors.tertiaryColor};
+  border: 1px solid ${theme.colors.textColor};
+  background-color: ${theme.colors.secondaryColor};
   color: ${theme.colors.black};
   font-size: 14px;
+`
+
+export const DeliveryFooter = styled.div`
+  margin: 24px 0 0 0;
+
+  button:first-child {
+    margin: 0 0 8px 0;
+  }
 `
 
 export const DeliveryButton = styled(ButtonContainer)`
@@ -73,7 +74,7 @@ export const DeliveryButton = styled(ButtonContainer)`
 
 export const DeliveryRow = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 34px;
 
   div {
     width: 100%;

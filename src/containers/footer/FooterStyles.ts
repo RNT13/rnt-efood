@@ -25,6 +25,7 @@ export const FooterContainer = styled.div`
   }
 
   ${(media.md, media.sm)} {
+    width: 900px;
     height: 650px;
 
     img {
@@ -32,7 +33,7 @@ export const FooterContainer = styled.div`
     }
 
     p {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
 
     h4 {
@@ -48,10 +49,9 @@ export const FooterLogo = styled.img`
 `
 
 export const FooterText = styled.p`
-  font-size: 14px;
+  font-size: 12px;
   color: ${theme.colors.primaryColor};
   text-align: center;
-  width: 900px;
 `
 
 export const FooterCopy = styled.h4``
@@ -67,7 +67,7 @@ export const SocialLinksItens = styled.a`
   cursor: pointer;
 
   svg {
-    font-size: 40px;
+    font-size: 24px;
   }
 
   &:hover {

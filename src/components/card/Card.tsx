@@ -1,5 +1,4 @@
 import { FaStar } from 'react-icons/fa'
-import { getCountry } from '../../utils/countryUtils'
 import Tag from '../tags/Tag'
 import { CardContainer, CardContent, CardDescription, CardFooter, CardHeader, CardImage, CardPrice, CardStars, CardTitle } from './CarsStyles'
 
@@ -26,7 +25,7 @@ const Card = ({ foodId, restaurantId, image, title, description, stars, country,
     <CardContainer {...props}>
       <CardHeader>
         {highlight && <Tag>Destaque da Semana</Tag>}
-        {country && <Tag>{getCountry(country)}</Tag>}
+        {country && <Tag>{country}</Tag>}
       </CardHeader>
       <CardImage src={image} alt={title || 'Default Alt Text'} />
       <CardContent>

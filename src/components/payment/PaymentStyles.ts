@@ -9,14 +9,7 @@ export const PaymentContainer = styled.div`
   justify-content: center;
   gap: 20px;
   width: 100%;
-  height: 100%;
-  padding-top: 20px;
   color: ${theme.colors.secondaryColor};
-
-  #first {
-    margin-top: 50px;
-    margin-bottom: 10px;
-  }
 
   ${media.sm} {
     width: 100%;
@@ -42,8 +35,8 @@ export const PaymentContainer = styled.div`
 
 export const PaymentTitle = styled.h2`
   text-align: left;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 700;
 `
 
 export const PaymentForm = styled.form`
@@ -60,26 +53,33 @@ export const PaymentLabel = styled.label`
 export const PaymentInput = styled.input`
   width: 100%;
   padding: 8px;
-  border: 1px solid ${theme.colors.secondaryColor};
-  background-color: ${theme.colors.tertiaryColor};
+  border: 1px solid ${theme.colors.textColor};
+  background-color: ${theme.colors.secondaryColor};
   color: ${theme.colors.black};
   font-size: 14px;
 `
 
+export const PaymentFooter = styled.div`
+  margin: 24px 0 0 0;
+
+  button:first-child {
+    margin: 0 0 8px 0;
+  }
+`
+
 export const PaymentRow = styled.div`
-  width: 100%;
   display: flex;
-  gap: 20px;
+  gap: 34px;
 
   div {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
-`
 
-export const PaymentInputHalf = styled(PaymentInput)`
-  width: 100%;
+  #cddDiv {
+    width: 120%;
+  }
 `
 
 export const PaymentButton = styled(ButtonContainer)`

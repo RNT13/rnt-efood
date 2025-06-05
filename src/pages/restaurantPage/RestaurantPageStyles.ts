@@ -6,7 +6,6 @@ import { media } from '../../style/media'
 import { theme } from '../../style/theme'
 
 export const RestaurantPageContainer = styled.div`
-  padding: 50px 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -21,7 +20,7 @@ export const RestaurantPageContainer = styled.div`
 export const RestaurantPageContent = styled.div`
   width: 100%;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 100px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
@@ -57,6 +56,8 @@ export const RestaurantPageContent = styled.div`
 export const RestaurantPageCard = styled(Card)`
   background-color: ${theme.colors.primaryColor};
   color: ${theme.colors.textColor};
+  width: 320px;
+  height: 340px;
 
   ${ButtonContainer} {
     width: 100%;
@@ -65,17 +66,23 @@ export const RestaurantPageCard = styled(Card)`
   }
 
   ${CardImage} {
-    width: 300px;
+    width: 100%;
     height: 160px;
-    padding: 10px;
+    padding: 8px;
   }
 
   ${CardTitle} {
-    width: 50%;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 900;
+    color: ${theme.colors.secondaryColor};
   }
 
-  ${CardPrice} {
-    width: 50%;
+  ${CardDescription} {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: ${theme.colors.secondaryColor};
   }
 
   ${media.sm} {
@@ -105,14 +112,6 @@ export const RestaurantPageCard = styled(Card)`
       font-size: 2.5rem;
       text-align: right;
       margin-bottom: 8px;
-    }
-
-    ${CardDescription} {
-      width: 100%;
-      height: auto;
-      font-size: 2rem;
-      margin-bottom: 16px;
-      line-height: 1.4;
     }
 
     ${ButtonContainer} {

@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
       font-family: "Roboto", sans-serif;
       font-weight: bold;
-      background-color: ${theme.colors.secondaryColor};
+      background-color: ${theme.colors.tertiaryColor};
       overflow-x: hidden;
     }
 
@@ -28,4 +28,14 @@ export const AppLayout = styled.div`
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
   height: 100vh;
+`
+
+export const OverLay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
 `

@@ -11,7 +11,7 @@ export const CardContainer = styled.div`
   height: 100%;
   width: 100%;
   border: 1px solid ${theme.colors.primaryColor};
-  background-color: ${theme.colors.secondaryColor};
+  background-color: ${theme.colors.textColor};
   color: ${theme.colors.primaryColor};
   box-shadow: 3px 3px 15px ${theme.colors.black};
 `
@@ -31,17 +31,17 @@ export const CardImage = styled.img`
 `
 
 export const CardContent = styled.div`
-  padding: 10px;
+  padding: 8px 8px 16px 8px;
   height: 100%;
 `
 
 export const CardDescription = styled.div`
   font-size: 14px;
-  line-height: 20px;
+  line-height: 22px;
 `
 
 export const CardTitle = styled.h2`
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   display: inline-block;
   width: 80%;
   text-align: left;
@@ -59,13 +59,14 @@ export const CardStars = styled.h3`
 `
 
 export const CardPrice = styled.h3`
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   display: inline-block;
   width: 20%;
   text-align: right;
 `
 
 export const CardFooter = styled.div`
-  padding: 10px;
+  display: flex;
   width: 100%;
+  padding: 0px 8px 8px 8px;
 `

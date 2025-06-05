@@ -10,26 +10,32 @@ export const PopupOverlay = styled.div`
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 9998;
+  z-index: 9999;
 `
 
 export const PopupContainer = styled.div`
-  padding: 20px;
   position: fixed;
+  padding: 32px;
+  width: 1000px;
   top: 50%;
   left: 50%;
-  width: 1000px;
-  display: flex;
   transform: translate(-50%, -50%);
+  display: flex;
   background-color: ${theme.colors.primaryColor};
   color: ${theme.colors.textColor};
 
   z-index: 9999;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   ${ButtonContainer} {
     background-color: ${theme.colors.secondaryColor};
     color: ${theme.colors.primaryColor};
+    border-color: ${theme.colors.primaryColor};
+  }
+
+  ${ButtonContainer}:hover {
+    background-color: ${theme.colors.primaryColor};
+    color: ${theme.colors.secondaryColor};
+    border-color: ${theme.colors.secondaryColor};
   }
 
   ${media.lg} {
@@ -70,11 +76,20 @@ export const PopupContainer = styled.div`
 `
 
 export const PopupContent = styled.div`
-  padding-left: 20px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 0 0 0 24px;
+  height: 100%;
+
+  h2 {
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    margin: 12px 0 16px 0;
+  }
 
   ${media.sm} {
     height: auto;
@@ -85,8 +100,8 @@ export const PopupContent = styled.div`
 export const PopupImage = styled.img`
   display: flex;
   align-self: center;
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
 `
 

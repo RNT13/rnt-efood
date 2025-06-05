@@ -13,7 +13,7 @@ const baseButton = `
 
   background-color: ${theme.colors.primaryColor};
   color: ${theme.colors.secondaryColor};
-  border: 2px solid ${theme.colors.secondaryColor};
+  border: 2px solid ${theme.colors.textColor};
 
   &:hover {
     background-color: ${theme.colors.primaryColor};

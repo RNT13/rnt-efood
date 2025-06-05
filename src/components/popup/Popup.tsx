@@ -11,7 +11,7 @@ interface PopupProps {
   onClose: () => void
 }
 
-const Popup: React.FC<PopupProps> = ({ message, onClose, image, desdcription, price, title, children }) => {
+const Popup = ({ message, onClose, image, desdcription, price, title, children }: PopupProps) => {
   return (
     <>
       <PopupOverlay onClick={onClose} />

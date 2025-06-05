@@ -7,8 +7,8 @@ export const theme = {
   },
   colors: {
     primaryColor: '#E66767',
-    secondaryColor: '#FFF8F2',
-    tertiaryColor: '#FFEBD9',
+    secondaryColor: '#FFEBD9',
+    tertiaryColor: '#fff',
     textColor: '#fff',
     yellow: '#ffff00',
     yellow2: '#E1A32A',

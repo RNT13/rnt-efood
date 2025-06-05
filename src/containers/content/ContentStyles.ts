@@ -17,7 +17,7 @@ export const ContentContainer = styled.div`
 export const ContentList = styled.ul`
   width: 100%;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 80px 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
@@ -72,6 +72,8 @@ export const ContentCard = styled(Card)`
 `
 
 export const ContentCardButton = styled(LinkButtonContainer)`
+  width: 100px;
+
   &:hover {
     background-color: ${theme.colors.secondaryColor};
     color: ${theme.colors.primaryColor};

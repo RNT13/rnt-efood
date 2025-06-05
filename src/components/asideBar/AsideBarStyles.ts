@@ -27,7 +27,7 @@ export const AsideBarContainer = styled.div`
   flex-direction: column;
   overflow-y: auto;
   position: fixed;
-  padding: 20px;
+  padding: 32px 8px 0 8px;
   padding-bottom: 10%;
   top: 0;
   right: 0;
@@ -40,6 +40,7 @@ export const AsideBarContainer = styled.div`
 
   ${media.sm} {
     width: 100%;
+    display: block;
   }
 `
 
@@ -57,7 +58,7 @@ export const AsideBarCloseButton = styled.button`
     display: block;
     position: relative;
     top: 0px;
-    left: 450px;
+    left: 820px;
     background: none;
     border: none;
     font-size: 3rem;
