@@ -1,56 +1,21 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import Popup from '../../components/popup/Popup'
 import { PopupButton } from '../../components/popup/PopupStyles'
+import { useGetRestaurantByIdQuery } from '../../redux/api/restaurantsApi'
 import { addToCart } from '../../redux/slices/cartSlice'
-import { getRestaurantById } from '../../utils/api'
+import { FoodType } from '../../types/foodType'
 import { RestaurantCardButton, RestaurantPageCard, RestaurantPageContainer, RestaurantPageContent } from './RestaurantPageStyles'
-
-type RestaurantType = {
-  id: number
-  titulo: string
-  descricao: string
-  capa: string
-  tipo: string
-  avaliacao: number
-  cardapio: FoodType[]
-}
-
-type FoodType = {
-  id: string
-  nome: string
-  descricao: string
-  preco: string
-  foto: string
-  porcao: string
-}
 
 const RestaurantPage = () => {
   const { id } = useParams<{ id: string }>()
   const dispatch = useDispatch()
 
-  const [restaurant, setRestaurant] = useState<RestaurantType | null>(null)
-  const [loading, setLoading] = useState(true)
   const [showPopup, setShowPopup] = useState(false)
   const [popupData, setPopupData] = useState<FoodType | null>(null)
 
-  useEffect(() => {
-    const fetchRestaurant = async () => {
-      try {
-        if (id) {
-          const data = await getRestaurantById(id)
-          setRestaurant(data)
-        }
-      } catch (e) {
-        console.error('Erro ao buscar restaurante', e)
-        setRestaurant(null)
-      } finally {
-        setLoading(false)
-      }
-    }
-    fetchRestaurant()
-  }, [id])
+  const { data: restaurant, isLoading: loading } = useGetRestaurantByIdQuery(id as string, { skip: !id })
 
   if (loading) return <p>Carregando restaurante...</p>
   if (!restaurant) return <p>Restaurante não encontrado</p>
@@ -79,7 +44,7 @@ const RestaurantPage = () => {
   return (
     <RestaurantPageContainer className="container">
       <RestaurantPageContent>
-        {restaurant.cardapio.map(food => (
+        {restaurant.cardapio.map((food: FoodType) => (
           <RestaurantPageCard
             key={food.id}
             image={food.foto}

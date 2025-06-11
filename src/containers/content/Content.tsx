@@ -1,37 +1,9 @@
-import { useEffect, useState } from 'react'
-import { getRestaurants } from '../../utils/api'
+import { useGetRestaurantsQuery } from '../../redux/api/restaurantsApi'
+import { RestaurantType } from '../../types/restaurantType'
 import { ContentCard, ContentCardButton, ContentContainer, ContentList } from './ContentStyles'
 
-export type RestaurantType = {
-  id: number
-  titulo: string
-  descricao: string
-  capa: string
-  tipo: string
-  destacado: boolean
-  avaliacao: number
-}
-
 const Content = () => {
-  const [restaurants, setRestaurants] = useState<RestaurantType[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await getRestaurants()
-        console.log('Restaurantes:', data)
-        setRestaurants(data)
-      } catch (err) {
-        console.error(err)
-        setError('Erro ao carregar restaurantes')
-      } finally {
-        setLoading(false)
-      }
-    }
-    fetchData()
-  }, [])
+  const { data: restaurants = [], isLoading: loading, isError: error } = useGetRestaurantsQuery('')
 
   if (loading) return <p>Carregando...</p>
   if (error) return <p>{error}</p>
@@ -39,7 +11,7 @@ const Content = () => {
   return (
     <ContentContainer className="container">
       <ContentList>
-        {restaurants.map(restaurant => (
+        {restaurants.map((restaurant: RestaurantType) => (
           <ContentCard
             key={restaurant.id}
             restaurantId={restaurant.id.toString()}
