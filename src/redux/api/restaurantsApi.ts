@@ -1,4 +1,4 @@
-import apiSlice from './apiSlice'
+import apiSlice from './apiSlice';
 
 export const restaurantsApi = apiSlice.injectEndpoints({
   endpoints: builder => ({
@@ -15,6 +15,6 @@ export const restaurantsApi = apiSlice.injectEndpoints({
       providesTags: ['Restaurant']
     })
   })
-})
+});
 
-export const { useGetRestaurantsQuery, useGetRestaurantByIdQuery, useGetRestaurantsByCategoryQuery } = restaurantsApi
+export const { useGetRestaurantsQuery, useGetRestaurantByIdQuery, useGetRestaurantsByCategoryQuery } = restaurantsApi;

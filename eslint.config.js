@@ -31,8 +31,8 @@ export default [
           singleQuote: true,
           trailingComma: 'none',
           semi: false,
-          printWidth: 150,
-          arrowParens: 'avoid'
+          printWidth: 200,
+          arrowParens: ['error', 'as-needed']
         }
       ]
     }

@@ -14,7 +14,7 @@ const Footer = () => {
         <SocialLinksItens href="https://github.com/RNT13" target="_blank" rel="noopener noreferrer">
           <FaGithub />
         </SocialLinksItens>
-        <SocialLinksItens href="https://www.linkedin.com/in/renato-luiz-0b072b247/" target="_blank" rel="noopener noreferrer">
+        <SocialLinksItens href="https://www.linkedin.com/in/renato-minoita/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </SocialLinksItens>
         <SocialLinksItens href="https://www.instagram.com/renatominoita/" target="_blank" rel="noopener noreferrer">

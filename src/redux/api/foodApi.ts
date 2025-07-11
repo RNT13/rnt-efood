@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { FoodType } from '../../types/foodType';
 import apiSlice from './apiSlice';
 
@@ -13,6 +12,6 @@ export const foodApi = apiSlice.injectEndpoints({
       providesTags: (_result, _error, { restaurantId }) => [{ type: 'Food', id: restaurantId }]
     })
   })
-})
+});
 
-export const { useGetFoodByRestaurantQuery, useGetFoodTypeQuery } = foodApi
+export const { useGetFoodByRestaurantQuery, useGetFoodTypeQuery } = foodApi;
